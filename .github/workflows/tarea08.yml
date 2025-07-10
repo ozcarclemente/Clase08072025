@@ -6,4 +6,6 @@ jobs:
     steps:
       - name: Check MySQL version
         run: mysql --version
+      - run: mysql -e "CREATE DATABASE testdb;"
+      - run: mysql -e "SHOW DATABASES;"
       - uses: actions/checkout@v3
