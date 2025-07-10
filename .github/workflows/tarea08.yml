@@ -1,0 +1,9 @@
+on: push
+jobs:
+  build-node:
+    runs-on: ubuntu-latest
+    container: mysql:latest
+    steps:
+      - name: Check MySQL version
+        run: mysql --version
+      - uses: actions/checkout@v3
