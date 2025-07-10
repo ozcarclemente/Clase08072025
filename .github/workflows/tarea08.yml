@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:latest
     steps:
-      - name: Check MySQL version
+      - name: Python Version
         run: python --version
       - run: python -c "print('Hola, Dorx')"
       - run: python -c "print('10*10 es igual a ' + str(10*10))"
