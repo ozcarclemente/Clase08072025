@@ -2,10 +2,9 @@ on: push
 jobs:
   build-node:
     runs-on: ubuntu-latest
-    container: mysql:latest
+    container: python:latest
     steps:
       - name: Check MySQL version
-        run: mysql --version
-      - run: mysql -e "CREATE DATABASE testdb;"
-      - run: mysql -e "SHOW DATABASES;"
-      - uses: actions/checkout@v3
+        run: python --version
+      - run: python -c "print('Hola, Dorx')"
+      - run: python -c "print('10*10 es igual a ' + str(10*10))"
